@@ -30,32 +30,33 @@ int main() {
 
     //player chooses pokemon
 
-    int choice = -1;
+    int choice;
+    string chosen_pokemon;
 
-    while (choice == -1) {
-        cout << endl;
-        cin >> choice;
+    cout << endl;
+    cin >> choice;
 
-        //bulbasar
-        if (choice == 1) {
-            cout << "\"You chose Bulbasaur! A wise choice.\"\n";
-        }
-        //charmandar
-        else if (choice == 2) {
-            cout << "\"You chose Charmander! A fiery choice.\"\n";
-        }
-        //squirtle
-        else if (choice == 3) {
-            cout << "\"You chose Squirtle! A cool choice.\"\n";
-        }
-        else {
-            choice = -1;
-            cout << "\"That's not a choice! Please enter 1, 2, or 3.\"";
-        }
+
+    switch (choice) {
+        case 1: cout << "\"You chose Bulbasaur! A wise choice.\"\n";
+            chosen_pokemon = "Bulbasaur";
+
+            break;
+        case 2: cout << "\"You chose Charmander! A fiery choice.\"\n";
+                chosen_pokemon = "Charmander";
+
+            break;
+        case 3: cout << "\"You chose Squirtle! A cool choice.\"\n";
+                chosen_pokemon = "Squirtle";
+
+            break;
+        default: cout << "\"I'm afraid I do not have that number, so here is Pikachu! An electric choice.\"\n"; 
+                chosen_pokemon = "Pikachu";
+
     }
 
     //continuing dialogue
-    cout << "\n\n\"Beware, Trainer. This is only the beginning. Your journey is about to unfold!\n Now let's see if you've got what it takes to keep going!\nGood luck, and remember... Choose wisely!\"";
+    cout << "\n\n\"Beware, Trainer. This is only the beginning. Your journey is about to unfold!\n Now let's see if you've got what it takes to keep going!\nGood luck, and remember... Choose wisely!\"\n";
 
     return 0;
 }
